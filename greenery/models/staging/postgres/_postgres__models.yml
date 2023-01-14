@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_addresses
+    description: Address information including street, state, country and postal code
+  - name: stg_events
+    description: URL, event type, order id, product id, user id, date/time
+  - name: stg_order_items
+    description: Products connected to orders, with quantity
+  - name: stg_orders
+    description: Variety of order detail including user, date/time, address, costs, tracking information, delivery information
+  - name: stg_products
+    description: Product IDs, names, prices and inventory counts
+  - name: stg_promos
+    description: Promotion names, discount rates and status
+  - name: stg_users
+    description: User contact information, pointers to addresses
