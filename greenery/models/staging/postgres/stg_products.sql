@@ -1,2 +1,6 @@
-select product_id, name, price, inventory
+select 
+    product_id, 
+    name, 
+    price, 
+    inventory
 from {{ source('postgres','products')}}

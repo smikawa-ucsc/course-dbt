@@ -1,2 +1,5 @@
-select promo_id, discount, status
+select 
+    promo_id, 
+    discount, 
+    status
 from {{ source('postgres','promos')}}

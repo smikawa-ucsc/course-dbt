@@ -1,2 +1,6 @@
-select address_id, address, zipcode, state, country
+select address_id, 
+    address, 
+    zipcode, 
+    state, 
+    country
 from {{ source('postgres','addresses')}}
