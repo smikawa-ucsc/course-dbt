@@ -1,7 +1,7 @@
 select 
     order_id as order_guid, 
     user_id as user_guid, 
-    promo_id as promo_guid, 
+    promo_id as promo_description, 
     address_id as address_guid, 
     created_at::timestampntz as created_at_utc, 
     order_cost, 
