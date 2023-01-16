@@ -5,21 +5,22 @@ models:
     description: User address information - street, state, country and postal code
 
   - name: stg_events
-    description: User events - checkout, package shipped, added to cart, page views. 
-      URL, event type, order id, product id, user id, date/time
+    description: User events - checkout, package shipped, added to cart, page views 
+      Also addition detail including exact URL, order guid, product guid, user guid, date/time
 
   - name: stg_order_items
-    description: Product/order associations with quantity.
+    description: Product/order associations, including quantity.
 
   - name: stg_orders
-    description: Order information - user id, delivery address, created date, promotion, purchase and shipping costs, 
-      tracking id, shipping service, estimated delivery date/time and delivery date/time
+    description: Order information - user guid, delivery address, created date, promotion, purchase and shipping costs, 
+      tracking guid, shipping service used, estimated delivery date/time and delivery date/time
 
   - name: stg_products
-    description: Product ID, name, price and inventory count
+    description: Product guid, product name, price, and inventory count
 
   - name: stg_promos
-    description: Promotion names, discount rates and status
+    description: Promotion names, discount rates, and status
 
   - name: stg_users
-    description: User contact information - first and last name, email, phone number, created/updated timestamps, pointer to one address
+    description: User contact information - first name, last name, email, phone number, 
+      created/updated timestamps, pointer to one address
