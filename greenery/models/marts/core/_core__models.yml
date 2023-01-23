@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_users
+    description: Users joined to addresses
+  - name: dim_users
+    description: Users
+  - name: fct_orders
+    description: Order information
+  - name: dim_products
+    description: Product information

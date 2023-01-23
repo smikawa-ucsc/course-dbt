@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: user_order_facts
+    description: User information with related order information including first order, last order, total cost, and total number of orders

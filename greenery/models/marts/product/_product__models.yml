@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: fact_page_views
+    description: Base and aggregate product information such as name price, total orders, daily orders, daily views
+  - name: int_product_events
+    description: Product event totals and first event date of product
