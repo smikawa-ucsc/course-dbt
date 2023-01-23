@@ -13,33 +13,15 @@ with users as (
         country_fullname
     from {{ref('dim_users')}}
 ),
-orders as (
-    select 
-        order_guid, 
-        user_guid, 
-        promo_description, 
-        address_guid, 
-        created_at_utc, 
-        order_cost, 
-        shipping_cost, 
-        order_total, 
-        tracking_guid, 
-        shipping_service, 
-        estimated_delivery_at_utc, 
-        delivered_at_utc, 
-        order_status
-    from {{ ref('fct_orders')}}
-),
 
 order_calcs as (
     select
         user_guid,
-        count(order_guid, user_guid) as order_total, 
-        min(created_at_utc) as order_first_utc, 
-        max(created_at_utc) as order_last_utc,
-        sum(order_cost) as order_total_cost
-    from orders
-    group by 1
+        order_total, 
+        order_first_utc, 
+        order_last_utc,
+        order_total_cost
+    from {{ ref('int_user_order_calcs')}}
 )
 
 select 

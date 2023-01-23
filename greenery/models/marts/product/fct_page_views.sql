@@ -12,15 +12,14 @@ events_calcs as (
         product_views,
         product_added_to_cart,
         days_since_first_event
-    from {{ ref('int_product_events')}}
+    from {{ ref('int_product_event_calcs')}}
 ),
 
 order_item_calcs as (
     select
         product_guid,
-        count(order_guid) as product_order_count
-    from {{ref('stg_order_items')}} 
-    group by 1
+        product_order_count
+    from {{ref('int_product_order_item_calcs')}} 
 )
 
 select 
