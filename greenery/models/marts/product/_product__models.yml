@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: fct_page_views
+  - name: fct_products
     description: Base and aggregate product information such as name price, total orders, daily orders, daily views
     +materialized: table
   - name: int_product_event_calcs

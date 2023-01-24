@@ -31,6 +31,7 @@ select
     product_views / days_since_first_event as average_daily_views,
     product_added_to_cart,
     product_order_count,
-    product_order_count / days_since_first_event as average_daily_orders
+    product_order_count / days_since_first_event as average_daily_orders,
+    product_order_count / product_views  as orders_per_view
 from products join events_calcs on products.product_guid = events_calcs.product_guid
     join order_item_calcs on products.product_guid = order_item_calcs.product_guid
