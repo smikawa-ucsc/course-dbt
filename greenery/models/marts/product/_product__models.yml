@@ -5,7 +5,7 @@ models:
     description: Base and aggregate product information such as name price, total orders, daily orders, daily views
     +materialized: table
   - name: int_product_event_calcs
-    description: Product event totals and first event date of product
+    description: Product event aggregates, including first event date of product
     +materialized: table
   - name: int_product_order_item_calcs
-    description: Product order counts
+    description: Product order aggregates
