@@ -22,18 +22,11 @@ order_item_calcs as (
     from {{ref('int_product_order_item_calcs')}} 
 ),
 
-unique_viewers as (
-    select
-        product_guid,
-        unique_sessions_with_view
-    from {{ ref('int_product_session_views')}}
-),
-
-session_checkouts as (
-    select
-        product_guid,
+session_calcs as (
+    select product_guid,
+        unique_sessions_with_view,
         session_checkouts
-    from {{ ref('int_product_session_checkouts')}}
+    from {{ ref('int_product_session_calcs')}}
 )
 
 
@@ -52,5 +45,4 @@ select
 from products 
     left join events_calcs on products.product_guid = events_calcs.product_guid
     left join order_item_calcs on products.product_guid = order_item_calcs.product_guid
-    left join unique_viewers on products.product_guid = unique_viewers.product_guid
-    left join session_checkouts on products.product_guid = session_checkouts.product_guid
+    left join session_calcs on products.product_guid = session_calcs.product_guid
