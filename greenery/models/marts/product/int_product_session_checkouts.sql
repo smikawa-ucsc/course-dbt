@@ -1,7 +1,7 @@
 select 
-    prd.product_guid, 
+    product_guid, 
     count(distinct session_guid) as session_checkouts
-from {{ref('dim_products')}} prd 
-    left join {{ref('stg_order_items')}} oit on prd.product_guid = oit.product_guid
-    left join {{ref('stg_events')}} evt on oit.order_guid = evt.order_guid
+from {{ref('stg_order_items')}} 
+    join {{ref('stg_events')}} evt on oit.order_guid = evt.order_guid
+where event_description = 'checkout'
 group by 1

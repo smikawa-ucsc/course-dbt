@@ -34,3 +34,6 @@ CONVERSION_RATE	PRODUCT_NAME
 0.474576	Spider Plant
 0.609375	String of pearls
 0.539683	ZZ Plant
+
+Why might certain products be converting at higher/lower rates than others? 
+    Difficult to evaluate.  As far as factors that we could control: Unfavorable product images or descriptions.  The product name itself - maybe people are finding themselves on the page for a product different than they expected based on their searching.
