@@ -24,9 +24,9 @@ order_item_calcs as (
 
 session_calcs as (
     select product_guid,
-        unique_sessions_with_view,
-        session_checkouts
-    from {{ ref('int_product_session_calcs')}}
+        unique_session_views,
+        unique_session_checkouts
+    from {{ ref('int_session_calcs')}}
 )
 
 
@@ -41,7 +41,7 @@ select
     product_order_count,
     product_order_count / days_since_first_event as average_daily_orders,
     product_order_count / product_views  as orders_per_view,
-    session_checkouts / unique_sessions_with_view as conversion_rate
+    unique_session_checkouts / unique_session_views as conversion_rate
 from products 
     left join events_calcs on products.product_guid = events_calcs.product_guid
     left join order_item_calcs on products.product_guid = order_item_calcs.product_guid
