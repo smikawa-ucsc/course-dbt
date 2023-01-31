@@ -37,3 +37,8 @@ CONVERSION_RATE	PRODUCT_NAME
 
 Why might certain products be converting at higher/lower rates than others? 
     Difficult to evaluate.  As far as factors that we could control: Unfavorable product images or descriptions.  The product name itself - maybe people are finding themselves on the page for a product different than they expected based on their searching.
+
+Which orders changed between snapshots?
+29d20dcd-d0c4-4bca-a52d-fc9363b5d7c6
+c0873253-7827-4831-aa92-19c38372e58d
+e2729b7d-e313-4a6f-9444-f7f65ae8db9a
