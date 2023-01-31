@@ -1,6 +1,3 @@
 select 
-    product_guid, 
-    product_name, 
-    price, 
-    inventory_count
+    {{ dbt_utils.star(from=ref('stg_products'))}}
 from {{ ref('stg_products')}}
