@@ -3,13 +3,12 @@ version: 2
 models:
   - name: int_users
     description: Users joined to addresses
-    +materialized: table
+
   - name: dim_users
     description: User information
-    +materialized: table
+
   - name: fct_orders
     description: Order information
-    +materialized: table
+
   - name: dim_products
     description: Product information
-    +materialized: table

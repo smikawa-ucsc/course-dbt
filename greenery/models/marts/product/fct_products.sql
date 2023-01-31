@@ -36,12 +36,12 @@ select
     price,
     inventory_count,
     product_views,
-    product_views / days_since_first_event as average_daily_views,
+    DIV0(product_views, days_since_first_event) as average_daily_views,
     product_added_to_cart,
     product_order_count,
-    product_order_count / days_since_first_event as average_daily_orders,
-    product_order_count / product_views  as orders_per_view,
-    unique_session_checkouts / unique_session_views as conversion_rate
+    DIV0(product_order_count, days_since_first_event) as average_daily_orders,
+    DIV0(product_order_count, product_views)  as orders_per_view,
+    DIV0(unique_session_checkouts, unique_session_views) as conversion_rate
 from products 
     left join events_calcs on products.product_guid = events_calcs.product_guid
     left join order_item_calcs on products.product_guid = order_item_calcs.product_guid

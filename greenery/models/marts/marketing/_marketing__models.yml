@@ -3,6 +3,5 @@ version: 2
 models:
   - name: fct_user_orders
     description: User information with related order information including first order, last order, total cost, and total number of orders
-    +materialized: table
+
   - name: int_user_order_calcs
-    +materialized: table
