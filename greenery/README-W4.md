@@ -6,15 +6,13 @@ df91aa85-bfc7-4c31-93ef-4cee8d00a343
 841074bf-571a-43a6-963c-ba7cbdb26c85
 
 How are our users moving through the product funnel?
-    0.5351622 convert from a page view to an add to cart
-    0.877827333333 convert from add to cart to checkout
-
+    From a session point of view
+        0.808 sessions will add to cart after viewing
+        0.773 sessions will checkout after adding to cart
 Which steps in the funnel have largest drop off points?
-    The users viewing a product have a large drop off between that action and adding to cart.
-        Maybe they aren't finding what they need, or the price is not what they expect.
-    The users adding to cart have a pretty high rate of checking out and completing their order.
+   Both seem pretty high overall, but the largest dropoff is between adding to cart and checking out at 23.7% melt.
 
-Session analysis
+Overall session analysis
     578 sessions with a page view
     467 sessions with a product added to cart
     361 sessions with a checkout
