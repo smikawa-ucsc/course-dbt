@@ -10,5 +10,5 @@ models:
   - name: int_product_order_item_calcs
     description: Product order aggregates
     
-  - name: int_session_calcs
+  - name: int_product_session_calcs
     description: Unique session actions per product

@@ -12,3 +12,7 @@ models:
 
   - name: dim_products
     description: Product information
+
+  - name: int_session_events
+
+  - name: fct_user_sessions
