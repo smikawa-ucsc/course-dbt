@@ -16,3 +16,5 @@ models:
   - name: int_session_events
 
   - name: fct_user_sessions
+
+  - name: fct_product_funnel
